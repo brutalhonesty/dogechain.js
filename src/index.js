@@ -109,7 +109,6 @@ var addresstohash = function (address, callback) {
  */
 var checkaddress = function (address, callback) {
 	if(!address) return callback('Missing address to check.');
-	console.log(ENDPOINT + 'chain/Dogecoin/q/checkaddress/'+address);
 	request(ENDPOINT + 'chain/Dogecoin/q/checkaddress/'+address, function (error, response, body) {
 		if(error) return callback(error);
 		if(response.statusCode === 200) {
